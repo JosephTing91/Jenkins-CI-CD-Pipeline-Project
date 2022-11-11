@@ -51,6 +51,9 @@ pipeline {
               -Dsonar.login=e0c55b9178ad2365bf7b3848c06780ed2374a22b"""
       }
     }
+
+  }
+}
   //   stage('Upload to Artifactory') {
   //     steps {
   //       sh "mvn clean deploy -DskipTests"
@@ -100,7 +103,6 @@ pipeline {
   //   }
   // }
 
-  }
-}
+
 
 //slackSend channel: '#mbandi-cloudformation-cicd', message: "Please find the pipeline status of the following ${env.JOB_NAME ${env.BUILD_NUMBER} ${env.BUILD_URL}"
