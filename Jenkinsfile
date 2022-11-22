@@ -63,6 +63,12 @@ pipeline {
 
         }
     }
+    
+    stage("Upload artifact to Nexus"){
+      steps{
+        sh 'mvn clean deploy -DskipTests'
+      }
+      }
 
   }
 }
