@@ -48,12 +48,13 @@ pipeline {
         
         withSonarQubeEnv('SonarQube') {
 
-        sh """mvn sonar:sonar \
-              -Dsonar.projectKey=JavaWebApp \
-              -Dsonar.host.url=http://172.31.31.247:9000 \
-              -Dsonar.login=e0c55b9178ad2365bf7b3848c06780ed2374a22b"""
+        sh """
+        mvn sonar:sonar \
+      -Dsonar.projectKey=JavaWebApp \
+      -Dsonar.host.url=http://172.31.31.247:9000 \
+      -Dsonar.login=e0c55b9178ad2365bf7b3848c06780ed2374a22b
+      """
         }
-
       }
     }
     stage('Quality Gate'){
